@@ -1,0 +1,12 @@
+@mixin star($size, $background-image, $top, $right) {
+  content: "";
+  position: absolute;
+  top: $top;
+  right: $right;
+  width: $size;
+  height: $size;
+  background-image: $background-image;
+  background-repeat: no-repeat;
+  animation: spin 2s infinite ease-in-out;
+  animation-delay: 2s;
+}

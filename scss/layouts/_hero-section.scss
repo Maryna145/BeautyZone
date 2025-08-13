@@ -1,0 +1,45 @@
+.hero-section {
+  padding: 130px 0;
+  background-image: linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url(../images/hero-photo.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+  position: relative;
+  padding-left: 160px;
+  z-index: 0;
+}
+.hero-section .wave {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.hero-title {
+  color: var(--color-brand-light);
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 140px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  line-height: 0.8;
+  max-width: 530px;
+}
+.p-hero-name {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.hero-text {
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 238px;
+  text-align: center;
+}
