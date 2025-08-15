@@ -1,5 +1,10 @@
 .about-section {
-  padding: 63px 0 88px;
+  padding: 28px 20px 52px;
+
+  @media screen and (min-width: $bp-dekstop) {
+    padding: 63px 0 88px;
+  }
+
   &__div {
     display: flex;
     gap: 32px;
@@ -7,27 +12,37 @@
   }
   &__content {
     max-width: 709px;
+    position: relative;
   }
   &__title {
-    margin-bottom: 40px;
-    max-width: 529px;
-  }
-  &__last {
-    font-size: 22px;
+    margin-bottom: 24px;
+    @media screen and (min-width: $bp-dekstop) {
+      margin-bottom: 40px;
+      max-width: 529px;
+    }
   }
   &__p {
-    margin-bottom: 40px;
-    font-size: 22px;
-    --limited {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.2;
+    @media screen and (min-width: $bp-dekstop) {
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 1.7;
+    }
+    &--limited {
       max-width: 708px;
+      margin-bottom: 0;
     }
   }
   &__photo {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    min-width: 500px;
-    position: relative;
+    display: none;
+    @media screen and (min-width: $bp-dekstop) {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      min-width: 500px;
+    }
   }
   &__photo1 {
     border-radius: 50%;
@@ -41,23 +56,39 @@
 
 @import "../utils/mixins";
 .star1 {
-  @include star(64px, url(../images/Star\ 1.svg), 342px, 282px);
+  @include star(64px, url(../images/Star\ 1.svg), 342px, 320px);
+  @media screen and (max-width: $bp-dekstop) {
+    @include star(40px, url(../images/Star\ 1.svg), 342px, 0);
+
+  }
 }
 .star2 {
   @include star(40px, url(../images/Star\ 2.svg), 40px, 28px);
+  @media screen and (max-width: $bp-dekstop) {
+    display: none;
+  }
 }
 .star3 {
   @include star(16px, url(../images/Star\ 3.svg), 277px, 100px);
+  @media screen and (max-width: $bp-dekstop) {
+    display: none;
+  }
 }
 
 @keyframes spin {
   0% {
-    transform: scale(1.05) rotate(0deg);
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05); 
   }
   50% {
-    transform: scale(1.2) rotate(180deg);
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(0.95);
   }
   100% {
-    transform: scale(1) rotate(360deg);
+    transform: rotate(360deg) scale(1);
   }
 }

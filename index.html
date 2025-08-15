@@ -21,24 +21,28 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="header__nav">
-          <a href="index.html">
-            <img src="./images/logo.svg" alt="logo Beauty Zone" />
-          </a>
-          <ul class="header__menu">
-            <li><a class="header__menu-link link" href="#about">Про нас</a></li>
-            <li>
-              <a class="header__menu-link link" href="#why-us">Чому ми</a>
-            </li>
-            <li>
-              <a class="header__menu-link link" href="#our-procedure"
-                >Наші процедури</a
-              >
-            </li>
-            <li>
-              <a class="header__menu-link link" href="#contacts">Контакти</a>
-            </li>
-          </ul>
+        <div class="header__container">
+          <nav class="header__nav">
+            <a href="index.html">
+              <img src="./images/logo.svg" alt="logo Beauty Zone" />
+            </a>
+            <ul class="header__menu">
+              <li>
+                <a class="header__menu-link link" href="#about">Про нас</a>
+              </li>
+              <li>
+                <a class="header__menu-link link" href="#why-us">Чому ми</a>
+              </li>
+              <li>
+                <a class="header__menu-link link" href="#our-procedure"
+                  >Наші процедури</a
+                >
+              </li>
+              <li>
+                <a class="header__menu-link link" href="#contacts">Контакти</a>
+              </li>
+            </ul>
+          </nav>
           <ul class="header__social">
             <li class="header__social__link social-link">
               <a href="tel:+380960000007">
@@ -66,7 +70,17 @@
               </a>
             </li>
           </ul>
-        </nav>
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24px" height="24px">
+              <use href="./images/burger-menu.svg"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              Close
+            </button>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -101,17 +115,18 @@
           <div class="about-section__div">
             <div class="about-section__content">
               <h2 class="about-section__title section__title">
-                Перевтілюйтесь в <span class="text-brand">Beauty Zone!</span>
+                Перевтілюйтесь в
+                <span class="bold text-brand">Beauty Zone!</span>
               </h2>
               <p class="about-section__p">
                 Наша косметологічна клініка пропонує вам професійні послуги з
                 догляду за шкірою обличчя та тіла.
               </p>
-              <p class="about-section__last about-section__p--limited">
+              <p class="about-section__p about-section__p--limited">
                 В <span class="bold">beauty zone</span> ми гарантуємо найвищі
                 стандарти якості та приємний сервіс. Наші косметологічні
                 процедури та препарати допоможуть вам підтримувати свою красу та
-                молодість. З нами краса назавжди!
+                молодість. <br />З нами краса назавжди!
               </p>
             </div>
             <div class="about-section__photo">
@@ -125,10 +140,10 @@
                 src="./images/face-after.jpg"
                 alt="face after"
               />
-              <span class="star1"></span>
-              <span class="star2"></span>
-              <span class="star3"></span>
             </div>
+            <span class="star1"></span>
+            <span class="star2"></span>
+            <span class="star3"></span>
           </div>
         </div>
       </section>
@@ -164,6 +179,35 @@
             </linearGradient>
           </defs>
         </svg>
+        <svg class="why-section__mobile-svg"
+          width="360"
+          height="817"
+          viewBox="0 0 360 817"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M378.182 728.792C286.843 772.378 200.424 826.299 98.7211 815.484C-7.35329 804.205 -101.684 748.73 -175.617 669.905C-259.853 580.094 -337.764 474.661 -335.331 352.71C-332.694 220.524 -278.297 76.9939 -162.594 17.0259C-53.8217 -39.3497 66.4792 69.2933 189.767 80.5568C329.143 93.2902 481.861 -1.97898 592.858 86.0437C714.909 182.832 782.742 366.794 734.154 512.266C688.071 650.24 508.583 666.567 378.182 728.792Z"
+            fill="url(#paint0_linear_78_184)"
+            fill-opacity="0.2"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_78_184"
+              x1="276.689"
+              y1="-40.2177"
+              x2="272.568"
+              y2="1192.81"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.119146" stop-color="#2B7FFF" />
+              <stop offset="0.602996" stop-color="#2B7FFF" stop-opacity="0.2" />
+              <stop offset="0.636279" stop-color="#2B7FFF" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
 
         <div class="container">
           <div class="why-section__content">
@@ -174,7 +218,7 @@
               <li lass="why-section__item">
                 <article class="why-card">
                   <img src="./images/vector-article-1.svg" alt="" />
-                  <p class="why-card__p ">
+                  <p class="why-card__p">
                     Всі наші косметологи мають вищу медичну освіту та стаж
                     роботи від 5 років
                   </p>
@@ -183,7 +227,7 @@
               <li lass="why-section__item">
                 <article class="why-card">
                   <img src="./images/vector-article-2.svg" alt="" />
-                  <p class="why-card__p ">
+                  <p class="why-card__p">
                     Використовуємо тільки професійне обладнання та косметику,
                     перевірену часом
                   </p>
@@ -192,7 +236,7 @@
               <li lass="why-section__item">
                 <article class="why-card">
                   <img src="./images/vector-article-3.svg" alt="" />
-                  <p class="why-card__p ">
+                  <p class="why-card__p">
                     Наша мета - підкреслити переваги та приховати недоліки, а не
                     переробити
                   </p>
@@ -202,7 +246,7 @@
           </div>
         </div>
       </section>
-      <section class="procedure-section section" id="our-procedure">
+      <!-- <section class="procedure-section section" id="our-procedure">
         <div class="container">
           <h2 class="procedure-section__title section__title ">
             Наші <span class="text-brand">процедури</span>
@@ -357,10 +401,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav">
@@ -506,7 +550,8 @@
           </p>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

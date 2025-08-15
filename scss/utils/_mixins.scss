@@ -7,6 +7,7 @@
   height: $size;
   background-image: $background-image;
   background-repeat: no-repeat;
-  animation: spin 2s infinite ease-in-out;
+  background-size: contain;
+  animation: spin 4s infinite ease-in-out;
   animation-delay: 2s;
 }
