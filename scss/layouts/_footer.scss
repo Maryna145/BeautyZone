@@ -49,12 +49,8 @@
 .footer-nav-link {
   font-size: 16px;
   color: var(--color-primary);
-  text-decoration: none;
-  transition: color 0.2s;
 }
-.footer-nav-link:hover {
-  color: var(--color-brand-light);
-}
+
 .address-link {
   text-decoration: none;
   font-size: 16px;
@@ -85,11 +81,8 @@
 }
 .social-link-footer {
   fill: var(--color-primary);
-  transition: color 0.2s;
 }
-.social-link-footer:hover {
-  fill: var(--color-brand-light);
-}
+
 .footer-social {
   display: flex;
   gap: 24px;

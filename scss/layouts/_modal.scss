@@ -11,6 +11,11 @@
   background-color: rgb(1, 31, 74, 0.4);
   z-index: 2;
   transition: opacity 0.2s, visibility 0.2s;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 .modal {
   position: relative;
@@ -23,14 +28,39 @@
   border-radius: 48px;
   background-image: url(../images/footer-bgc.png);
   overflow-y: auto;
-}
-.modal-btn-close {
-  position: absolute;
-  right: 50px;
-  top: 58px;
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  &__btn-close {
+    position: absolute;
+    right: 50px;
+    top: 58px;
+  }
+  &__form-field {
+    margin: 0 auto 24px;
+    max-width: 310px;
+  }
+  &__button {
+    display: block;
+    font-size: 16px;
+    margin: 0 auto 8px;
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+  &__form-title {
+    font-size: 64px;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-family: "Play", sans-serif;
+    text-align: center;
+    line-height: 1.0;
+    margin-bottom: 40px;
+  }
+  &__form-p {
+    color: var(--color-primary);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 32px;
+    max-width: 274px;
+  }
 }

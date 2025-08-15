@@ -1,17 +1,13 @@
-.nav-link {
+.link {
   text-decoration: none;
-  color: var(--color-brand-dark);
-  font-size: 18px;
   transition: color 0.2s;
+  &:hover {
+    color: var(--color-brand-light);
+  }
 }
-.nav-link:hover {
-  color: var(--color-brand-light);
-}
-.accent {
-  color: var(--color-brand-light);
-}
-.accent-bold {
-  text-transform: capitalize;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
+.social-link{
+  transition: fill 0.2s;
+  &:hover{
+    fill: var(--color-brand-light);
+  }
 }

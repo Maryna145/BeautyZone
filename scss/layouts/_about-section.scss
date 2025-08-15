@@ -1,46 +1,53 @@
 .about-section {
   padding: 63px 0 88px;
+  &__div {
+    display: flex;
+    gap: 32px;
+    position: relative;
+  }
+  &__content {
+    max-width: 709px;
+  }
+  &__title {
+    margin-bottom: 40px;
+    max-width: 529px;
+  }
+  &__last {
+    font-size: 22px;
+  }
+  &__p {
+    margin-bottom: 40px;
+    font-size: 22px;
+    --limited {
+      max-width: 708px;
+    }
+  }
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 500px;
+    position: relative;
+  }
+  &__photo1 {
+    border-radius: 50%;
+    align-self: flex-start;
+  }
+  &__photo2 {
+    border-radius: 50%;
+    align-self: flex-end;
+  }
 }
-.about-div {
-  display: flex;
-  gap: 32px;
-  position: relative;
+
+@import "../utils/mixins";
+.star1 {
+  @include star(64px, url(../images/Star\ 1.svg), 342px, 282px);
 }
-.about-content {
-  max-width: 709px;
+.star2 {
+  @include star(40px, url(../images/Star\ 2.svg), 40px, 28px);
 }
-.about-title {
-  margin-bottom: 40px;
-  max-width: 529px;
-}
-.about-p {
-  margin-bottom: 40px;
-  font-size: 22px;
-}
-.about-par {
-  font-size: 22px;
-  max-width: 708px;
-}
-.about-photo {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  min-width: 500px;
-  position: relative;
-}
-@import '../utils/mixins';
-.star1{
-  @include star(64px, url(../images/Star\ 1.svg), 342px, 282px)
-}
-.star2{
-  @include star(40px, url(../images/Star\ 2.svg), 40px, 28px)
-}
-.star3{
-  @include star(16px, url(../images/Star\ 3.svg), 277px, 100px)
-}
-.photo1 {
-  border-radius: 50%;
-  align-self: flex-start;
+.star3 {
+  @include star(16px, url(../images/Star\ 3.svg), 277px, 100px);
 }
 
 @keyframes spin {
@@ -53,8 +60,4 @@
   100% {
     transform: scale(1) rotate(360deg);
   }
-}
-.photo2 {
-  border-radius: 50%;
-  align-self: flex-end;
 }
