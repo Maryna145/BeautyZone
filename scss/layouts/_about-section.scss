@@ -58,7 +58,7 @@
 .star1 {
   @include star(64px, url(../images/Star\ 1.svg), 342px, 320px);
   @media screen and (max-width: $bp-dekstop) {
-    @include star(40px, url(../images/Star\ 1.svg), 342px, 0);
+    @include star(40px, url(../images/Star\ 1.svg), 280px, 0);
 
   }
 }

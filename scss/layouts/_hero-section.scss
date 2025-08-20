@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 71px 20px 28px;
+  padding: 70px 20px 28px;
 
   @media screen and (min-width: $bp-dekstop) {
     padding: 130px 0;
@@ -29,13 +29,20 @@
 
   &__wave {
     position: absolute;
-    bottom: -10px;
+    bottom: -1px;
     left: 0;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 55px; 
+    overflow: hidden;
+    z-index: 0;
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
     @media screen and (min-width: $bp-dekstop) {
       position: absolute;
-      bottom: -70px;
+      bottom: -65px;
       left: 0;
       width: 100%;
       height: auto;
@@ -46,15 +53,16 @@
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 140px;
-    margin-bottom: 40px;
     max-width: 530px;
     text-transform: capitalize;
     line-height: 0.8;
-    @media screen and (max-width: $bp-dekstop) {
-      font-size: 54px;
-      margin-bottom: 32px;
-      text-align: center;
+    font-size: 54px;
+    margin:0 auto 32px;
+    text-align: center;
+    @media screen and (min-width: $bp-dekstop) {
+      margin:  0 0 40px;
+      font-size: 140px;
+      text-align: left;
     }
   }
   &__p {

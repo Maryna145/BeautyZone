@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -75,10 +79,64 @@
               <use href="./images/burger-menu.svg"></use>
             </svg>
           </button>
-          <div class="mobile-menu">
-            <button class="mobile-menu__btn-close menu-btn-close" type="button">
-              Close
+          <div class="mobile">
+            <button class="mobile__btn-close menu-btn-close" type="button">
+              <svg width="24px" height="24px">
+                <use href="./images/close-mobile-menu.svg"></use>
+              </svg>
             </button>
+            <nav class="mobile__nav">
+              <a href="index.html">
+                <img src="./images/logo.svg" alt="logo Beauty Zone" />
+              </a>
+              <ul class="mobile__menu">
+                <li>
+                  <a class="header__menu-link link" href="#about">Про нас</a>
+                </li>
+                <li>
+                  <a class="header__menu-link link" href="#why-us">Чому ми</a>
+                </li>
+                <li>
+                  <a class="header__menu-link link" href="#our-procedure"
+                    >Наші процедури</a
+                  >
+                </li>
+                <li>
+                  <a class="header__menu-link link" href="#contacts"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+              <ul class="mobile__social">
+                <li class="header__social__link social-link">
+                  <a href="tel:+380960000007">
+                    <svg class="address-icon" width="32px" height="32px">
+                      <use
+                        href="./images/symbol-defs.svg#icon-telephone-link"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="header__social__link social-link">
+                  <a href="#">
+                    <svg class="address-icon" width="32px" height="32px">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook-link"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="header__social__link social-link">
+                  <a href="#">
+                    <svg class="address-icon" width="32px" height="32px">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram-link"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -151,8 +209,6 @@
       <section class="why-section section" id="why-us">
         <svg
           class="why-section__svg"
-          width="1440"
-          height="1507"
           viewBox="0 0 1440 1507"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -179,32 +235,34 @@
             </linearGradient>
           </defs>
         </svg>
-        <svg class="why-section__mobile-svg"
+
+        <svg
+          class="why-section__mobile-svg"
           width="360"
-          height="817"
-          viewBox="0 0 360 817"
+          height="945"
+          viewBox="0 0 360 945"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
-            d="M378.182 728.792C286.843 772.378 200.424 826.299 98.7211 815.484C-7.35329 804.205 -101.684 748.73 -175.617 669.905C-259.853 580.094 -337.764 474.661 -335.331 352.71C-332.694 220.524 -278.297 76.9939 -162.594 17.0259C-53.8217 -39.3497 66.4792 69.2933 189.767 80.5568C329.143 93.2902 481.861 -1.97898 592.858 86.0437C714.909 182.832 782.742 366.794 734.154 512.266C688.071 650.24 508.583 666.567 378.182 728.792Z"
+            d="M608.502 925.502C517.163 969.088 -150.297 924.315 -252 913.5C-358.074 902.221 -335.333 768.998 -335.333 667.5C-335.333 566.001 -337.765 474.664 -335.333 352.713C-332.696 220.526 -278.299 76.9965 -162.595 17.0284C-53.8234 -39.3472 66.4776 69.2956 189.765 80.5591C329.142 93.2925 481.859 -1.97655 592.856 86.0461C714.907 182.835 716 339.21 716 507.5C715.999 651.234 746.501 888.003 608.502 925.502Z"
             fill="url(#paint0_linear_78_184)"
             fill-opacity="0.2"
           />
           <defs>
             <linearGradient
               id="paint0_linear_78_184"
-              x1="276.689"
-              y1="-40.2177"
-              x2="272.568"
+              x1="276.687"
+              y1="-40.2156"
+              x2="272.567"
               y2="1192.81"
               gradientUnits="userSpaceOnUse"
             >
               <stop offset="0.119146" stop-color="#2B7FFF" />
-              <stop offset="0.602996" stop-color="#2B7FFF" stop-opacity="0.2" />
-              <stop offset="0.636279" stop-color="#2B7FFF" stop-opacity="0" />
+              <stop offset="0.548077" stop-color="#2B7FFF" stop-opacity="0.2" />
+              <stop offset="0.682692" stop-color="#2B7FFF" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -246,13 +304,16 @@
           </div>
         </div>
       </section>
-      <!-- <section class="procedure-section section" id="our-procedure">
+      <section class="procedure-section section" id="our-procedure">
         <div class="container">
-          <h2 class="procedure-section__title section__title ">
+          <h2 class="procedure-section__title section__title">
             Наші <span class="text-brand">процедури</span>
           </h2>
-          <div class="procedure-section__container">
-            <button type="button" class="carousel-button">
+          <div class="procedure-section__slider">
+            <button
+              class="procedure-section__button carousel-button prev"
+              type="button"
+            >
               <svg
                 class="carousel-arrow"
                 width="18"
@@ -268,39 +329,81 @@
                 />
               </svg>
             </button>
-            <ul class="procedure-section__list">
-              <li class="procedure-section__item">
-                <article class="procedure-card">
-                  <img
-                    class="procedure-card__img"
-                    src="./images/masks-procedure.jpg"
-                    alt=""
-                  />
-                  <h3 class="procedure-card__title">Маски для обличчя</h3>
-                </article>
-              </li>
-              <li class="procedure-section__item">
-                <article class="procedure-card">
-                  <img
-                    class="procedure-card__img"
-                    src="./images/injection-procedure.jpg"
-                    alt=""
-                  />
-                  <h3 class="procedure-card__title">Ін'єкції для обличчя</h3>
-                </article>
-              </li>
-              <li class="procedure-section__item">
-                <article class="procedure-card">
-                  <img
-                    class="procedure-card__img"
-                    src="./images/cleaning-procedure.jpg"
-                    alt=""
-                  />
-                  <h3 class="procedure-card__title">Очищення обличчя</h3>
-                </article>
-              </li>
-            </ul>
-            <button type="button" class="carousel-button carousel-button__next">
+            <div class="procedure-section__container swiper">
+              <ul class="procedure-section__list swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/masks-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Маски для обличчя</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/injection-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Ін'єкції для обличчя</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/cleaning-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Очищення обличчя</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/masks-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Маски для обличчя</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/injection-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Ін'єкції для обличчя</h3>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="procedure-card">
+                    <img
+                      class="procedure-card__img"
+                      src="./images/cleaning-procedure.jpg"
+                      alt=""
+                    />
+                    <h3 class="procedure-card__title">Очищення обличчя</h3>
+                  </div>
+                </li>
+              </ul>
+              <div class="pagination">
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+              </div>
+            </div>
+
+            <button
+              class="procedure-section__button carousel-button next"
+              type="button"
+            >
               <svg
                 class="carousel-arrow"
                 width="18"
@@ -320,7 +423,7 @@
         </div>
       </section>
 
-      <section class="contact-section section " id="contacts">
+      <section class="contact-section section" id="contacts">
         <div class="container">
           <div class="contact-section__container">
             <h2 class="contact-section__title section__title">
@@ -330,8 +433,6 @@
               <iframe
                 class="contact-section__map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.475791668505!2d30.775223399999994!3d50.50671339999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d97de411b701%3A0x48116b28f7f00d94!2z0LLRg9C70LjRhtGPINCi0LDRgNCw0YHQsCDQqNC10LLRh9C10L3QutCwLCA1LCDQkdGA0L7QstCw0YDQuCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMDc0MDA!5e0!3m2!1suk!2sua!4v1754644522711!5m2!1suk!2sua"
-                width="605"
-                height="481"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -401,76 +502,92 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="footer-container">
-          <nav class="footer-nav">
-            <div class="footer-logo">
+        <div class="footer__container">
+          <nav class="footer__nav">
+            <div class="footer__logo">
               <a href="index.html">
                 <img src="./images/logo.svg" alt="logo Beauty Zone" />
               </a>
             </div>
 
-            <ul class="footer-menu">
-              <li><a class="link footer-nav-link" href="about">Про нас</a></li>
-              <li><a class="link footer-nav-link" href="why-us">Чому ми</a></li>
+            <ul class="footer__menu">
+              <li><a class="link footer__nav-link" href="about">Про нас</a></li>
               <li>
-                <a class="link footer-nav-link" href="our-procedure"
+                <a class="link footer__nav-link" href="why-us">Чому ми</a>
+              </li>
+              <li>
+                <a class="link footer__nav-link" href="our-procedure"
                   >Наші процедури</a
                 >
               </li>
               <li>
-                <a class="link footer-nav-link" href="contacts">Контакти</a>
+                <a class="link footer__nav-link" href="contacts">Контакти</a>
               </li>
             </ul>
           </nav>
 
-          <address class="footer-address">
-            <div class="footer-links">
-              <ul class="address-list">
+          <address class="footer__address">
+            <div class="footer__links">
+              <ul class="footer__address-list">
                 <li>
-                  <a class="address-link" href="tel:+380960000007"
+                  <a class="footer__address-link" href="tel:+380960000007"
                     >+38 (096) 000 00 07</a
                   >
                 </li>
                 <li>
-                  <a class="address-link" href="mailto:beautyzone@gmail.com"
+                  <a
+                    class="footer__address-link"
+                    href="mailto:beautyzone@gmail.com"
                     >beautyzone@gmail.com</a
                   >
                 </li>
                 <li>
                   <a
-                    class="address-link"
+                    class="footer__address-link"
                     href="https://maps.app.goo.gl/v8wL9ZzK4omWBHGx7"
                     >Україна, м. Київ, вул. Тараса Шевченка 5</a
                   >
                 </li>
               </ul>
-              <ul class="footer-social">
-                <li class="social-link-footer social-link">
+              <ul class="footer__social">
+                <li class="footer__social-link social-link">
                   <a href="tel:+380960000007">
-                    <svg class="address-icon" width="32px" height="32px">
+                    <svg
+                      class="footer__address-icon"
+                      width="42px"
+                      height="42px"
+                    >
                       <use
                         href="./images/symbol-defs.svg#icon-telephone-link"
                       ></use>
                     </svg>
                   </a>
                 </li>
-                <li class="social-link-footer social-link">
+                <li class="footer__social-link social-link">
                   <a href="#">
-                    <svg class="address-icon" width="32px" height="32px">
+                    <svg
+                      class="footer__address-icon"
+                      width="42px"
+                      height="42px"
+                    >
                       <use
                         href="./images/symbol-defs.svg#icon-facebook-link"
                       ></use>
                     </svg>
                   </a>
                 </li>
-                <li class="social-link-footer social-link">
+                <li class="footer__social-link social-link">
                   <a href="#">
-                    <svg class="address-icon" width="32px" height="32px">
+                    <svg
+                      class="footer__address-icon"
+                      width="42px"
+                      height="42px"
+                    >
                       <use
                         href="./images/symbol-defs.svg#icon-instagram-link"
                       ></use>
@@ -479,17 +596,23 @@
                 </li>
               </ul>
             </div>
-            <div class="address-info">
-              <a class="address-policy" href="#">Політика конфіденційності</a>
-              <p class="address-copyright">&copy; 2022 Дані захищені</p>
+            <div class="footer__address-info">
+              <a class="footer__address-policy" href="#"
+                >Політика конфіденційності</a
+              >
+              <p class="footer__address-copyright">&copy; 2022 Дані захищені</p>
             </div>
           </address>
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
       <div class="modal">
-        <button class="modal__btn-close modal-btn-close" type="button">Close</button>
+        <button class="modal__btn-close modal-btn-close" type="button">
+          <svg width="32px" height="32px">
+            <use href="./images/close-modal.svg"></use>
+          </svg>
+        </button>
         <h2 class="modal__form-title">Замовити дзвінок</h2>
         <p class="modal__form-p">
           Запишіться <span class="text-brand">безкоштовно</span> та отримайте
@@ -550,7 +673,9 @@
           </p>
         </form>
       </div>
-    </div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./js/procedure-slider.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>

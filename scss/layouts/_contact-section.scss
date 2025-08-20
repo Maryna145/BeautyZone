@@ -1,16 +1,38 @@
 .contact-section {
-  margin-bottom: 96px;
+  padding-bottom: 0;
+  @media screen and (min-width: $bp-tablet) {
+    padding-bottom: 96px;
+  }
   &__content {
     display: flex;
-    gap: 32px;
+    flex-direction: column-reverse;
+    gap: 24px;
     width: 100%;
     justify-content: center;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
   &__title {
     text-align: center;
   }
   &__map {
-    border-radius: 32px;
+    flex-shrink: 0;
+    border: none;
+    height: 232px;
+    width: 100%;
+
+    @media screen and (min-width: $bp-tablet) {
+      border-radius: 32px;
+      width: 320px;
+      height: 481px;
+    }
+    @media screen and (min-width: $bp-dekstop) {
+      border-radius: 32px;
+      width: 605px;
+      height: 481px;
+    }
   }
   &__form-title {
     color: var(--color-primary);
@@ -39,15 +61,19 @@
     background-color: var(--color-brand-dark);
     border-radius: 32px;
     background-image: url(../images/footer-bgc.png);
+    @media screen and (max-width: $bp-tablet) {
+      margin: 0 auto;
+      width: 320px;
+      height: 496px;
+      padding: 42px 24px;
+    }
   }
-  &__button{
+  &__button {
     display: block;
     margin: 0 auto 8px;
     font-size: 16px;
-    &:hover{
+    &:hover {
       color: var(--color-primary);
     }
   }
- 
 }
-

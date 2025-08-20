@@ -7,11 +7,17 @@
   color: var(--color-primary);
   height: 52px;
   transition: all 0.2s;
+  @media screen and (max-width: $bp-mobile) {
+      padding: 8px 24px;
+    }
   &::placeholder {
     left: 32px;
     top: 18px;
     font-size: 13px;
     color: var(--color-primary);
+    @media screen and (max-width: $bp-tablet) {
+        font-size: 14px;
+      }
   }
   &:focus {
     border-color: var(--color-gray);

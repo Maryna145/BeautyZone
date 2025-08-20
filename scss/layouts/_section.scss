@@ -1,7 +1,7 @@
 .section {
   padding-bottom: 28px;
-  @media screen and (min-width: $bp-dekstop) {
-    padding: 48px 0;
+  @media screen and (min-width: $bp-tablet) {
+    padding: 20px 20px;
   }
   &__title {
     color: var(--color-brand-dark);
